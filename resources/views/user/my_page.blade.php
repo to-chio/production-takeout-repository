@@ -9,17 +9,18 @@
             <p class="user_name">{{ $post -> user -> name }}</p>
             <div class="post_head">
                 <p class="shop_name">{{ $post -> shop -> shop_name }}</p>
-                <form action="{{ route('edit') }}" method="post">
-                    @csrf
-                    <input type="hidden" name="edit" value="{{ $post -> id }}">
-                    <button type="submit">編集</button>
-                </form>
-                <form action="{{ route('postDelete') }}" method="post">
-                    @csrf
-                    <input type="hidden" name="id" value="{{ $post -> id }}">
-                    <button type="submit">削除</button>
-                </form>
-
+                <div class="operation">
+                    <form action="{{ route('edit') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="edit" value="{{ $post -> id }}">
+                        <button type="submit">編集</button>
+                    </form>
+                    <form action="{{ route('postDelete') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $post -> id }}">
+                        <button type="submit">削除</button>
+                    </form>
+                </div>
             </div>
             <div class="contents_wrap">
                 <div class="matter_wrap">

@@ -124,6 +124,12 @@ a, button {
     font-size: 28px;
 }
 
+.operation {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .contents_wrap {
     padding: 0 1em;
     height: auto;
