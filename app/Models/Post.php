@@ -92,4 +92,14 @@ class Post extends Model
         $this -> comment = $request -> input('comment');
         $this -> save();
     }
+
+    /**
+     * 取得したidの投稿を削除
+     * 
+     * @param $id
+     */
+    public function postDelete($id) {
+
+        return self::where('id', $id) -> delete();
+    }
 }

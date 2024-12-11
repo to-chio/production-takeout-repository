@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/myPage', 'PostController@myPage') -> name('myPage');
     Route::post('/edit', 'PostController@edit') -> name('edit');
     Route::post('/update', 'PostController@update') -> name('update');
+    Route::post('/postDelete', 'PostController@postDelete') -> name('postDelete');
 
     //お気に入りroute
     Route::get('/favorite', 'FavoriteController@favorite') -> name('favorite');

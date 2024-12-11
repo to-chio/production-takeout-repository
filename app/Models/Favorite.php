@@ -71,4 +71,14 @@ class Favorite extends Model
 
         return self::where('id', $id) -> delete();
     }
+
+        /**
+     * 取得したidと一致するpost_idの投稿を削除
+     * 
+     * @param $id
+     */
+    public function postDelete($id) {
+
+        return self::where('post_id', $id) -> delete();
+    }
 }

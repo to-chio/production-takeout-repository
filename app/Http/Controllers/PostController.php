@@ -119,4 +119,20 @@ class PostController extends Controller
         
         return redirect('myPage');
     }
+
+    /**
+     * 投稿削除処理
+     * 
+     * @param Request $request
+     * @return view
+     */
+    public function postDelete(Request $request) {
+
+        $id = $request -> input('id');
+
+        Post::postDelete($id);
+        Favorite::postDelete($id);
+
+        return view('myPage');
+    }
 }

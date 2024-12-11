@@ -14,6 +14,12 @@
                     <input type="hidden" name="edit" value="{{ $post -> id }}">
                     <button type="submit">編集</button>
                 </form>
+                <form action="{{ route('postDelete') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $post -> id }}">
+                    <button type="submit">削除</button>
+                </form>
+
             </div>
             <div class="contents_wrap">
                 <div class="matter_wrap">
