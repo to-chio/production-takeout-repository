@@ -133,6 +133,6 @@ class PostController extends Controller
         Post::postDelete($id);
         Favorite::postDelete($id);
 
-        return view('myPage');
+        return redirect('myPage');
     }
 }

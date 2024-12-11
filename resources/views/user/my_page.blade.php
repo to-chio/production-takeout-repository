@@ -18,7 +18,7 @@
                     <form action="{{ route('postDelete') }}" method="post">
                         @csrf
                         <input type="hidden" name="id" value="{{ $post -> id }}">
-                        <button type="submit">削除</button>
+                        <button type="submit" onclick="return confirm('削除しますか？')">削除</button>
                     </form>
                 </div>
             </div>

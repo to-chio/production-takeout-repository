@@ -98,7 +98,7 @@ class Post extends Model
      * 
      * @param $id
      */
-    public function postDelete($id) {
+    public static function postDelete($id) {
 
         return self::where('id', $id) -> delete();
     }

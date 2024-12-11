@@ -77,7 +77,7 @@ class Favorite extends Model
      * 
      * @param $id
      */
-    public function postDelete($id) {
+    public static function postDelete($id) {
 
         return self::where('post_id', $id) -> delete();
     }
